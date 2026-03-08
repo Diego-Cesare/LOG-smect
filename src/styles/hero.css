@@ -1,10 +1,4 @@
 body {
-  background: radial-gradient(
-    circle at top,
-    var(--primary) 2%,
-    var(--secondary) 3%,
-    var(--background) 100%
-  );
   height: 100dvh;
   margin: 0;
 }
@@ -18,6 +12,56 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+#tree {
+  animation: tree 8s ease-in infinite;
+}
+
+#speed {
+  animation: speed 4s ease-in-out infinite alternate;
+}
+
+#truck,
+#BOX {
+  animation: truck 0.2s ease-in-out infinite alternate;
+}
+
+@keyframes tree {
+  from {
+    transform: translateX(850px);
+  }
+  to {
+    transform: translateX(-900px);
+  }
+}
+
+@keyframes speed {
+  from {
+    transform: translateX(15px);
+  }
+  to {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes truck {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes move-truck {
+  from {
+    transform: translateY(10px) rotate(-4deg);
+  }
+  to {
+    transform: translateY(-10px) rotate(4deg);
+  }
 }
 
 .logo {
