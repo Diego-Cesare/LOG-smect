@@ -1,0 +1,103 @@
+body {
+  background: radial-gradient(
+    circle at top,
+    var(--primary) 2%,
+    var(--secondary) 3%,
+    var(--background) 100%
+  );
+  height: 100dvh;
+  margin: 0;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.308);
+  width: 100%;
+  height: 100dvh;
+  backdrop-filter: blur(70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+}
+
+.card .logo span {
+  font-size: 8rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.logo span:nth-child(1) {
+  animation: animeup 2s ease-in-out 0s forwards infinite;
+}
+.logo span:nth-child(2) {
+  animation: animeup 3s ease-in-out 1s forwards infinite;
+}
+.logo span:nth-child(3) {
+  animation: animeup 4s ease-in-out 1.5s forwards infinite;
+}
+
+.card h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.subtitle p {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.subtitle p strong {
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.buttons a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: var(--background);
+  width: 200px;
+  height: 45px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.entry-btn {
+  background-color: var(--primary);
+}
+
+.delivery-btn {
+  background-color: var(--accent);
+}
+
+@keyframes animeup {
+  0% {
+    transform: translateY(20px);
+    color: var(--primary);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}

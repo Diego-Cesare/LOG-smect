@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-Br" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css"
+    />
+    <title>Log SMECT</title>
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html">
+        <i class="ph-duotone ph-house-line"></i>
+      </a>
+      <span class="titletype" id="title-type"></span>
+    </header>
+    <main>
+      <form id="report-form" action="">
+        <fieldset>
+          <legend id="legend-item"></legend>
+          <label for="item-type">
+            Tipo de item
+            <input
+              id="item-type"
+              name="itemType"
+              type="text"
+              placeholder="EX: Armario(s)"
+              required
+            />
+          </label>
+          <label for="item-quantity">
+            Quantidade
+            <input
+              id="item-quantity"
+              name="itemQuantity"
+              type="text"
+              placeholder="EX: 03"
+              required
+            />
+          </label>
+          <label for="item-description">
+            Descrição
+            <input
+              id="item-description"
+              name="itemDescription"
+              type="text"
+              placeholder="EX: Armarios brancos 2 portas"
+              required
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Dados do recebedor</legend>
+          <label for="receiver-location">
+            Local
+            <input
+              id="receiver-location"
+              name="receiverLocation"
+              type="text"
+              placeholder="Nome do local do recebimento"
+              required
+            />
+          </label>
+          <label for="receiver-name">
+            Nome
+            <input
+              id="receiver-name"
+              name="receiverName"
+              type="text"
+              placeholder="Nome de quem recebeu"
+              required
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Detalhes da entrega</legend>
+          <label for="deliverer-name">
+            Nome
+            <input
+              id="deliverer-name"
+              name="delivererName"
+              type="text"
+              placeholder="Nome do entregador"
+              required
+            />
+          </label>
+          <div class="box">
+            <label for="event-time">
+              <span id="item-time"></span>
+              <input id="event-time" name="eventTime" type="time" required />
+            </label>
+            <label for="event-date">
+              <span id="item-date"></span>
+              <input id="event-date" name="eventDate" type="date" required />
+            </label>
+          </div>
+        </fieldset>
+        <div class="actions">
+          <button id="register" class="register-btn" type="submit">
+            Registrar
+          </button>
+          <button id="share-report" class="share-btn" type="button">
+            Compartilhar
+          </button>
+        </div>
+      </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+    <script src="../scrips/page_logic.js"></script>
+  </body>
+</html>

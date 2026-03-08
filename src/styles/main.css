@@ -1,0 +1,97 @@
+body {
+  padding: 10px;
+  height: 100dvh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--primary);
+  background-color: var(--surface);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box span {
+  font-size: 1rem;
+}
+
+fieldset {
+  padding: 10px;
+  border-radius: 10px;
+  border: dashed 2px var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+legend,
+.titletype {
+  background-color: var(--primary);
+  padding: 7px;
+  color: var(--background);
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+label {
+  display: grid;
+  gap: 10px;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-bottom: solid 1px var(--primary);
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.actions {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.register-btn,
+.share-btn {
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text);
+  border: none;
+  background-color: var(--surface);
+  cursor: pointer;
+}
+
+.share-btn {
+  background-color: var(--primary);
+  color: var(--background);
+}
