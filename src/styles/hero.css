@@ -75,13 +75,13 @@ body {
 }
 
 .logo span:nth-child(1) {
-  animation: animeup 2s ease-in-out 0s forwards infinite;
+  animation: animeup 2s ease-in-out 0s forwards infinite alternate;
 }
 .logo span:nth-child(2) {
-  animation: animeup 3s ease-in-out 1s forwards infinite;
+  animation: animeup 2s ease-in-out 0.5s forwards infinite alternate;
 }
 .logo span:nth-child(3) {
-  animation: animeup 4s ease-in-out 1.5s forwards infinite;
+  animation: animeup 2s ease-in-out 1s forwards infinite alternate;
 }
 
 .card h1 {
@@ -140,7 +140,9 @@ body {
     color: var(--primary);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-20px) scale(1.1);
+    color: var(--primary);
+    text-shadow: 10px 10px 20px #000000;
   }
   100% {
     transform: translateY(20px);
